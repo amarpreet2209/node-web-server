@@ -51,6 +51,10 @@ app.get('/about',(req,res) => {
 	});
 });
 
+app.get('/html', (req, res) => {
+	res.sendfile('index.html');
+})
+
 app.get('/bad',(req,res) => {
 	res.send({
 		errorMessage : 'Unable to handle request'
